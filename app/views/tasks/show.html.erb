@@ -1,4 +1,5 @@
 <h1>Tarefa: <%= @task.name %></h1>
+<%= link_to 'Tarefas', controller: 'tasks' %>
 <p>
   <strong>Horário máximo:</strong>
   <%= @task.max_hours %>
@@ -8,3 +9,4 @@
   <strong>Descrição:</strong>
   <%= @task.description %>
 </p>
+<%= link_to 'Voltar', tasks_path %>

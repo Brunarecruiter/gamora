@@ -1,4 +1,6 @@
 <h1>Tarefas</h1>
+<%= link_to 'Nova Tarefa', new_task_path %> <br>
 <% @tasks.each do |task| %>
-  <%= task.name %> <br>
+  <%= task.name %>
+  <%= link_to 'Show', task_path(task) %>
 <% end %>
