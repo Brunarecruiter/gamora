@@ -1,5 +1,6 @@
 class PeopleController < ApplicationController
   def index
+    @people=Person.all
   end
 
   def new
@@ -10,6 +11,10 @@ class PeopleController < ApplicationController
 
     @person.save
     redirect_to @person
+  end
+
+  def show
+    @person = Person.find(params[:id])
   end
 
   private
