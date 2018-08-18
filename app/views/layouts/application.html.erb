@@ -5,9 +5,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+<style>
+.titulo {
+	color:red;
+	font-family:helvetica;
+}
+.time {
+	color:green; 
+	font-family:helvetica;
+	font-size:40px;
+}
+.pagina {
+	text-align:center;
+}
+.formulario {
+	text-align: left;
+	max-width: 60%;
+}
+</style>
   </head>
 
-  <body>
+  <body class="pagina">
+  	<h1 class="time">Gamora</h1>
     <%= yield %>
   </body>
 </html>
