@@ -1,14 +1,18 @@
-<%= form_with scope: :task, local: true do |form| %>
+<%= form_with scope: :task, url: tasks_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
   </p>
 
+  <p>
+    <%= form.label :max_hours %><br>
+    <%= form.number_field :max_hours %>
+  </p>
   <p>
     <%= form.submit %>
   </p>
